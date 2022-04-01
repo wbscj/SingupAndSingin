@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+
+#showSql
+#logging:
+#  level:
+#    com:
+#      example:
+#        mapper : debug
+
+
+spring:
+  application:
+    name: report
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/inandup?serverTimezone=GMT
+    username: root
+    password: root
+
+mybatis:
+  type-aliases-package: com.example.singup.entity
+  mapper-locations: ./mapper/*

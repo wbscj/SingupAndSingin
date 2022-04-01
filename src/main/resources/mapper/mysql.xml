@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.singup">
+
+    <resultMap id="BaseResultMap" type="com.example.singup.entity.user">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="sex" jdbcType="VARCHAR" property="sex" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+    </resultMap>
+
+
+
+    <!--注册-->
+    <insert id="Sing_up"  parameterType="com.example.singup.entity.user" >
+        insert into user (id,name,sex,phone)
+        values (#{user.id},#{name},#{sex},#{phone});
+    </insert>
+
+    <select id="select_phone_count"  resultType="Integer" >
+        select count(*) from User  where phone = #{phone};
+    </select>
+
+
+
+</mapper>
