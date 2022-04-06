@@ -50,7 +50,7 @@ public class SigninAndSingup {
                 return "注册失败，此手机号已注册!";
             }else {
                 int i = template.insert("Sing_up",user);
-                logger.info("注册成功"+user.getName()+user.getSex()+user.getPhone());
+                logger.info("注册成功"+user.getPhone());
                 return "注册成功!";
             }
 

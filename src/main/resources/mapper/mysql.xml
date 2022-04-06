@@ -16,8 +16,8 @@
 
     <!--注册-->
     <insert id="Sing_up"  parameterType="com.example.singup.entity.user" >
-        insert into user (id,name,sex,phone)
-        values (#{user.id},#{name},#{sex},#{phone});
+        insert into user (id,name,sex,phone,password)
+        values (#{id},#{name},#{sex},#{phone},#{password});
     </insert>
 
     <select id="select_phone_count"  resultType="Integer" >
