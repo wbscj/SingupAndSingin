@@ -21,7 +21,7 @@
     </insert>
 
     <select id="select_phone_count"  resultType="Integer" >
-        select count(*) from User  where phone = #{phone};
+        select count(*) from user  where phone = #{phone};
     </select>
 
 
