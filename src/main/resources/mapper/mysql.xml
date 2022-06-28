@@ -10,6 +10,7 @@
         <result column="name" jdbcType="VARCHAR" property="name" />
         <result column="sex" jdbcType="VARCHAR" property="sex" />
         <result column="phone" jdbcType="VARCHAR" property="phone" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
     </resultMap>
 
 
